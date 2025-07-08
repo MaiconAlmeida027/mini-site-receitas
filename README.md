@@ -25,7 +25,7 @@ HTML5: Para a estrutura e conteúdo das páginas.
 
 📝 Status do Projeto
 Este projeto está em desenvolvimento contínuo e serve como base para a aplicação de conceitos de HTML, e futuramente CSS e JavaScript.
-
+https://maiconalmeida027.github.io/mini-site-receitas/
 👨‍💻 Autor
 https://github.com/MaiconAlmeida027
 
