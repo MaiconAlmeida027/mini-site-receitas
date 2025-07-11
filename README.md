@@ -1,27 +1,38 @@
-🍳 Mini-Site de Receitas
-Este é um projeto simples de um mini-site de receitas desenvolvido para fins de aprendizado de HTML. Ele serve como um guia básico para a criação de páginas web estáticas, utilizando os principais elementos da linguagem HTML.
+Mini-Site de Receitas
+Este é um projeto simples de um mini-site de receitas, desenvolvido como parte de um curso de desenvolvimento web para praticar e consolidar conhecimentos em HTML e CSS.
+
+📝 Descrição do Projeto
+O objetivo principal deste projeto é criar uma página web estática que apresenta uma introdução a um site de receitas, uma tabela de conversão de medidas comuns e um formulário de inscrição para newsletter. O foco está na estruturação semântica do HTML e na aplicação de estilos CSS para um design moderno e responsivo.
 
 ✨ Funcionalidades
-Página inicial com boas-vindas e receitas em destaque.
+Cabeçalho (<header>): Contém o título do site e uma barra de navegação horizontal interativa.
 
-Navegação entre as páginas do site.
+Conteúdo Principal (<main>):
 
-Exemplo de uso de imagens.
+Seção de Boas-Vindas: Apresenta uma imagem responsiva e texto introdutório.
 
-Tabela de conversão de medidas comuns na cozinha.
+Tabela de Conversão: Uma tabela bem formatada com medidas comuns de culinária.
 
-Formulário de inscrição para newsletter (funcionalidade de envio não implementada neste projeto HTML puro).
+Formulário de Newsletter: Um formulário simples para coleta de e-mails, com campos estilizados e botão de envio.
 
-🚀 Como Visualizar
-Clone o repositório (se você estiver usando Git localmente) ou baixe os arquivos diretamente do GitHub.
+Rodapé (<footer>): Contém informações de direitos autorais e contato.
 
-Abra o arquivo index.html no seu navegador web preferido.
+Design Responsivo Básico: Elementos se adaptam à largura da tela.
 
-Alternativamente, você pode acessar a versão hospedada via GitHub Pages:
+Efeitos de Interatividade:
 
+Links da navegação com efeito de hover.
 
-🛠️ Tecnologias Utilizadas
-HTML5: Para a estrutura e conteúdo das páginas.
+Seções de conteúdo com efeito de "levantar" (transform e box-shadow) ao passar o mouse.
+
+Botão do formulário com efeito de hover suave.
+
+Organização de CSS: Utilização de variáveis CSS para cores, facilitando a manutenção e futuras alterações de tema.
+
+🚀 Tecnologias Utilizadas
+HTML5: Para a estrutura e conteúdo semântico da página.
+
+CSS3: Para a estilização completa, layout, responsividade básica e interatividade visual.
 
 📝 Status do Projeto
 Este projeto está em desenvolvimento contínuo e serve como base para a aplicação de conceitos de HTML, e futuramente CSS e JavaScript.
