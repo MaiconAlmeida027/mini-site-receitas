@@ -8,100 +8,158 @@
     <!-- Título que aparece na aba do navegador -->
     <title>Mini-Site de Receitas - Página Inicial</title>
     
-    <!-- Link para o arquivo de estilos CSS externo. Este arquivo define a aparência visual do portfólio. -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Link para o arquivo de estilos CSS externo (seu CSS personalizado) -->
+    <!-- Este arquivo será usado para estilos mais complexos ou específicos que o Tailwind não cobre diretamente -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Link para o Tailwind CSS via CDN -->
+    <!-- Isso permite usar as classes utilitárias do Tailwind diretamente no HTML -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuração opcional do Tailwind para usar a fonte Inter -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800">
     <!-- Cabeçalho da página: Contém o título principal do site e a navegação -->
-    <header>
-        <h1>Delícias Culinárias: Seu Guia de Receitas</h1>
+    <!-- Aplicando classes Tailwind para fundo, texto, padding, sombra e bordas arredondadas -->
+    <header class="bg-gradient-to-r from-red-500 to-orange-500 text-white p-6 shadow-md rounded-b-lg flex flex-col md:flex-row justify-between items-center">
+        <h1 class="text-3xl font-bold mb-4 md:mb-0">Delícias Culinárias: Seu Guia de Receitas</h1>
         <!-- Barra de navegação com links para as seções e outras páginas -->
+        <!-- Aplicando classes Tailwind para layout flex, espaçamento e alinhamento -->
         <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <!-- Links para as páginas de receitas (criaremos elas depois) -->
-                <li><a href="brigadeiro.html">Brigadeiro Tradicional</a></li>
-                <li><a href="bolodecenoura.html">Bolo de Cenoura</a></li>
-                <!-- Link para a página de contato (criaremos ela depois) -->
-                <li><a href="contato.html">Contato</a></li>
+            <ul class="flex flex-wrap justify-center gap-6">
+                <li><a href="index.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Início</a></li>
+                <!-- NOVOS LINKS DE NAVEGAÇÃO COM ESTILOS TAILWIND -->
+                <li><a href="pages/doces.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Receitas de Doces</a></li>
+                <li><a href="pages/salgados.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Receitas de Salgados</a></li>
+                <li><a href="pages/dicas.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Dicas</a></li>
+                <li><a href="pages/produtos.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Nossos Produtos</a></li>
+                <li><a href="pages/contato.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Conteúdo principal da página -->
-    <main>
-        <!-- Seção de boas-vindas e receitas em destaque -->
-        <section>
-            <h2>Bem-vindo(a) ao Nosso Universo de Sabores!</h2>
-            <p>Explore uma coleção de receitas deliciosas e fáceis de fazer, perfeitas para qualquer ocasião.<br> De doces a salgados, temos algo para todos os gostos. Prepare-se para cozinhar e se deliciar!</p>
+    <!-- Aplicando classes Tailwind para largura máxima, margens, padding e layout flex responsivo -->
+    <main class="max-w-6xl mx-auto my-8 p-4 flex flex-col lg:flex-row gap-8">
+        <!-- Div que envolve as seções principais de conteúdo (lado esquerdo) -->
+        <div class="flex-grow w-full lg:w-3/4">
+            <!-- Seção de boas-vindas e receitas em destaque -->
+            <!-- Aplicando classes Tailwind para fundo, padding, bordas arredondadas e sombra -->
+            <section class="bg-white p-8 rounded-lg shadow-md mb-8">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Bem-vindo(a) ao Nosso Universo de Sabores!</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">Explore uma coleção de receitas deliciosas e fáceis de fazer, perfeitas para qualquer ocasião.<br> De doces a salgados, temos algo para todos os gostos. Prepare-se para cozinhar e se deliciar!</p>
+                
+                <!-- Adição de uma imagem para ilustrar a seção de boas-vindas -->
+                <!-- Usamos um placeholder com um texto descritivo para a imagem -->
+                <!-- Aplicando classes Tailwind para largura máxima, altura automática e bordas arredondadas -->
+                <img src="https://placehold.co/600x300/FFD700/000000?text=Culinaria+Deliciosa" alt="Uma variedade de pratos culinários deliciosos" class="w-full h-auto rounded-md mt-4">
+                
+                <!-- Linha horizontal para separar visualmente o conteúdo -->
+                <!-- Aplicando classes Tailwind para estilo da linha -->
+                <hr class="border-t border-gray-300 my-6">
+
+                <h3 class="text-3xl font-bold text-gray-900 mb-4 text-center">Receitas em Destaque</h3>
+                <!-- Lista de receitas em destaque com layout de grid responsivo -->
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <li class="bg-gray-50 p-4 rounded-md shadow-sm hover:shadow-md transition-shadow">
+                        <a href="pages/brigadeiro.html" class="text-blue-600 hover:underline font-semibold">Brigadeiro Tradicional</a> - O clássico que nunca sai de moda.
+                    </li>
+                    <li class="bg-gray-50 p-4 rounded-md shadow-sm hover:shadow-md transition-shadow">
+                        <a href="pages/bolodecenoura.html" class="text-blue-600 hover:underline font-semibold">Bolo de Cenoura com Cobertura de Chocolate</a> - Um bolo fofinho e irresistível.
+                    </li>
+                    <!-- Mais receitas podem ser adicionadas aqui futuramente -->
+                </ul>
+            </section>
+
+            <!-- Nova Seção: Tabela de Conversão de Medidas (demonstração de tabelas) -->
+            <section class="bg-white p-8 rounded-lg shadow-md mb-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Tabela de Conversão de Medidas Comuns</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">Para facilitar suas aventuras na cozinha, aqui está uma tabela rápida de conversão de medidas.</p>
+                <!-- Tabela com classes Tailwind para largura, bordas e espaçamento -->
+                <table class="w-full border border-gray-300 mt-4">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="p-3 text-left border border-gray-300">Medida Original</th>
+                            <th class="p-3 text-left border border-gray-300">Equivalente (Aproximado)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-3 border border-gray-300">1 xícara (chá)</td>
+                            <td class="p-3 border border-gray-300">240 ml</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border border-gray-300">1 colher (sopa)</td>
+                            <td class="p-3 border border-gray-300">15 ml</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border border-gray-300">1 colher (chá)</td>
+                            <td class="p-3 border border-gray-300">5 ml</td>
+                        </tr>
+                    </tbody>
+                </table> 
+            </section>
+
+            <!-- Nova Seção: Formulário de Newsletter (demonstração de formulários) -->
+            <section class="bg-white p-8 rounded-lg shadow-md mb-8"> 
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Receba Nossas Novidades!</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">Assine nossa newsletter e receba as últimas receitas e dicas de culinária diretamente na sua caixa de entrada.</p>
+                
+                <form action="#" method="post">
+                    <div class="mb-4">
+                        <label for="newsletter-email" class="block text-gray-700 text-sm font-bold mb-2">Seu Email:</label>
+                        <input type="email" id="newsletter-email" name="emailNewsletter" required placeholder="seu.email@exemplo.com" class="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+
+                    <div class="mb-6">
+                        <input type="checkbox" id="aceite-termos" name="termos" required class="mr-2 align-middle"> 
+                        <label for="aceite-termos" class="text-gray-700 text-sm font-bold">Concordo em receber comunicações.</label> 
+                    </div>
+
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1">Assinar Newsletter</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Nova Aba Lateral (Aside) - para produtos ou conteúdo relacionado -->
+        <!-- Aplicando classes Tailwind para largura, fundo, padding, bordas arredondadas e sombra -->
+        <aside class="w-full lg:w-1/4 bg-white p-6 rounded-lg shadow-md h-fit">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Nossos Produtos Culinários</h3>
             
-            <!-- Adição de uma imagem para ilustrar a seção de boas-vindas -->
-            <!-- Usamos um placeholder com um texto descritivo para a imagem -->
-            <img src="https://placehold.co/600x300/FFD700/000000?text=Culinaria+Deliciosa" alt="Uma variedade de pratos culinários deliciosos">
-            
-            <!-- Linha horizontal para separar visualmente o conteúdo -->
-            <hr>
+            <!-- Exemplo de Card de Produto 1 -->
+            <div class="sidebar-product-card bg-white p-4 rounded-md shadow-sm mb-4 text-center">
+                <img src="https://placehold.co/200x120/8B5CF6/FFFFFF?text=Mix+de+Especiarias" alt="Mix de Especiarias Gourmet" class="w-full h-32 object-cover rounded-md mb-3">
+                <h4 class="text-lg font-semibold text-gray-900 mb-1">Mix de Especiarias Gourmet</h4>
+                <p class="text-sm text-gray-700 mb-3">Realce o sabor dos seus pratos com nossa seleção premium.</p>
+                <a href="#" class="inline-block bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold py-2 px-4 rounded-md transition duration-300">Ver Detalhes</a>
+            </div>
 
-            <h3>Receitas em Destaque</h3>
-            <ul>
-                <li><a href="brigadeiro.html">Brigadeiro Tradicional</a> - O clássico que nunca sai de moda.</li>
-                <li><a href="bolodecenoura.html">Bolo de Cenoura com Cobertura de Chocolate</a> - Um bolo fofinho e irresistível.</li>
-                <!-- Mais receitas podem ser adicionadas aqui futuramente -->
-            </ul>
-        </section>
+            <!-- Exemplo de Card de Produto 2 -->
+            <div class="sidebar-product-card bg-white p-4 rounded-md shadow-sm mb-4 text-center">
+                <img src="https://placehold.co/200x120/EC4899/FFFFFF?text=Utensilios+de+Silicone" alt="Kit de Utensílios de Silicone" class="w-full h-32 object-cover rounded-md mb-3">
+                <h4 class="text-lg font-semibold text-gray-900 mb-1">Kit de Utensílios de Silicone</h4>
+                <p class="text-sm text-gray-700 mb-3">Essenciais para sua cozinha, duráveis e fáceis de limpar.</p>
+                <a href="#" class="inline-block bg-pink-600 hover:bg-pink-700 text-white text-sm font-semibold py-2 px-4 rounded-md transition duration-300">Ver Detalhes</a>
+            </div>
 
-        <!-- Nova Seção: Tabela de Conversão de Medidas (demonstração de tabelas) -->
-        <section>
-            <h2>Tabela de Conversão de Medidas Comuns</h2>
-            <p>Para facilitar suas aventuras na cozinha, aqui está uma tabela rápida de conversão de medidas.</p>
-            <table border="1"> <!-- Atributo border para visualização simples da borda -->
-                <thead> <!-- Cabeçalho da tabela -->
-                    <tr> <!-- Primeira linha do cabeçalho -->
-                        <th>Medida Original</th> <!-- Célula de cabeçalho para a primeira coluna -->
-                        <th>Equivalente (Aproximado)</th> <!-- Célula de cabeçalho para a segunda coluna -->
-                    </tr>
-                </thead>
-                <tbody> <!-- Corpo da tabela, onde os dados são inseridos -->
-                    <tr> <!-- Primeira linha de dados -->
-                        <td>1 xícara (chá)</td> <!-- Célula de dados para a primeira coluna -->
-                        <td>240 ml</td> <!-- Célula de dados para a segunda coluna -->
-                    </tr>
-                    <tr> <!-- Segunda linha de dados - CORRIGIDO: Era 'chá', agora é 'sopa' -->
-                        <td>1 colher (sopa)</td> <!-- Célula de dados para a primeira coluna -->
-                        <td>15 ml</td> <!-- Célula de dados para a segunda coluna -->
-                    </tr>
-                    <tr> <!-- Terceira linha de dados -->
-                        <td>1 colher (chá)</td> <!-- Célula de dados para a primeira coluna -->
-                        <td>5 ml</td> <!-- Célula de dados para a segunda coluna -->
-                    </tr>
-                </tbody>
-            </table> 
-        </section>
-
-        <!-- Nova Seção: Formulário de Newsletter (demonstração de formulários) -->
-        <section> 
-            <h2>Receba Nossas Novidades!</h2>
-            <p>Assine nossa newsletter e receba as últimas receitas e dicas de culinária diretamente na sua caixa de entrada.</p>
-             
-            <form action="#" method="post">
-               <div>
-                   <label for="newsletter-email">Seu Email:</label>
-                     <input type="email" id="newsletter-email" name="emailNewsletter" required placeholder="seu.email@exemplo.com">
-               </div>
-
-               <div>
-                  <input type="checkbox" id="aceite-termos" name="termos" required> 
-                       <label for="aceite-termos">Concordo em receber comunicações.</label> 
-                </div>
-
-            <button type="submit">Assinar Newsletter</button>
-            </form>
-
-        </section>
+            <!-- Exemplo de Card de Produto 3 -->
+            <div class="sidebar-product-card bg-white p-4 rounded-md shadow-sm text-center">
+                <img src="https://placehold.co/200x120/10B981/FFFFFF?text=Livro+de+Receitas" alt="Livro de Receitas Exclusivo" class="w-full h-32 object-cover rounded-md mb-3">
+                <h4 class="text-lg font-semibold text-gray-900 mb-1">Livro de Receitas Exclusivo</h4>
+                <p class="text-sm text-gray-700 mb-3">Descubra segredos culinários com nosso livro digital.</p>
+                <a href="#" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold py-2 px-4 rounded-md transition duration-300">Ver Detalhes</a>
+            </div>
+        </aside>
     </main>
 
     <!-- Rodapé da página: Contém informações de copyright -->
-    <footer>
+    <!-- Aplicando classes Tailwind para fundo, texto, padding, alinhamento e bordas arredondadas -->
+    <footer class="bg-gray-900 text-white p-6 text-center rounded-t-lg mt-8">
         <p>&copy; 2025 Mini-Site de Receitas. Todos os direitos reservados.</p>
     </footer>
 </body>

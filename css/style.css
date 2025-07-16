@@ -1,0 +1,244 @@
+/* Aplica 'box-sizing: border-box;' a todos os elementos.*/
+* {
+    box-sizing: border-box;
+}
+
+/* Variáveis CSS (Custom Properties)
+ */
+:root {
+    --cor-primaria: #333;       /* Cinza escuro para cabeçalho, rodapé e botões */
+    --cor-secundaria: #f4f4f4;  /* Cinza suave para o fundo do body */
+    --cor-texto-claro: #fff;    /* Branco para texto em fundos escuros */
+    --cor-texto-escuro: #333;   /* Cinza escuro para texto em fundos claros */
+    --cor-destaque: #ffd700;    /* Dourado para destaque (hover de links) */
+    --cor-borda-clara: #ddd;    /* Cinza muito claro para bordas e linhas */
+    --cor-fundo-card: #fff;     /* Branco para o fundo dos cards (seções) */
+    --cor-fundo-tabela-cabecalho: #f2f2f2; /* Cinza claro para cabeçalho da tabela */
+}
+
+/* Estilos para o Corpo da Página (body)*/
+body {
+    font-family: Arial, sans-serif; /* Define a fonte principal e uma genérica de fallback */
+    font-size: 16px;                 /* Tamanho da fonte base para o texto */
+    line-height: 1.6;                /* Espaçamento entre linhas para melhor legibilidade */
+    color: var(--cor-texto-escuro);  /* Usa variável CSS */
+    background-color: var(--cor-secundaria); /* Usa variável CSS */
+    margin: 0;                       /* Remove a margem padrão que os navegadores aplicam ao body */
+    padding: 0;                      /* Remove o preenchimento padrão do body */
+}
+
+/* Estilos para o Cabeçalho (header)*/
+header {
+    background-color: var(--cor-primaria); /* Usa variável CSS */
+    color: var(--cor-texto-claro);         /* Usa variável CSS */
+    padding: 1em 0;         /* Preenchimento de 1em em cima/baixo e 0 nas laterais */
+    text-align: center;     /* Centraliza todo o conteúdo de texto dentro do cabeçalho */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adiciona uma sombra sutil abaixo do cabeçalho */
+}
+
+/* Estilos para o Título Principal (h1) dentro do cabeçalho*/
+header h1 {
+    font-size: 2.5em;       /* Aumenta o tamanho da fonte do título */
+    margin-bottom: 0.5em;   /* Reduz a margem inferior padrão para aproximar da navegação */
+}
+
+/* Estilos para a Navegação Principal (nav) */
+nav {
+    margin-top: 1em; /* Adiciona uma margem superior para separar a navegação do h1 */
+    width: 100%;     /* Garante que a navegação ocupe toda a largura disponível */
+}
+
+/* Estilos para a Lista Não Ordenada (ul) dentro da navegação
+ */
+nav ul {
+    list-style-type: none; /* Remove os marcadores de lista (bolinhas/números) */
+    margin: 0;             /* Zera a margem padrão da lista */
+    padding: 0;            /* Zera o preenchimento padrão da lista */
+    display: flex;         /* Transforma o UL em um contêiner flexível */
+    justify-content: center; /* Centraliza os itens (LI) horizontalmente */
+    /* 'overflow: hidden;' não é mais necessário aqui, pois Flexbox gerencia o fluxo */
+}
+
+/* Estilos para os Itens da Lista de Navegação (li)*/
+nav ul li {
+    /* float: left; -- Removido, pois Flexbox gerencia o alinhamento */
+    /* width: auto; -- Largura automática, ajustada pelo Flexbox */
+}
+
+
+nav ul li a {
+    display: block;         /* Essencial: Faz com que o link ocupe toda a área do LI,
+                               tornando toda a "caixa" do item do menu clicável.
+                               Também permite aplicar padding vertical. */
+    color: var(--cor-texto-claro); /* Usa variável CSS */
+    text-align: center;     /* Centraliza o texto dentro da área do link */
+    padding: 14px 16px;     /* Adiciona preenchimento interno ao link (vertical e horizontal) */
+    text-decoration: none;  /* Remove o sublinhado padrão dos links */
+}
+
+/* Estilos para o estado :hover dos Links da Navegação
+ */
+nav ul li a:hover {
+    background-color: var(--cor-secundaria); /* Usa variável CSS (um cinza mais claro para o hover) */
+    color: var(--cor-destaque);         /* Usa variável CSS */
+}
+
+/*Estilos para o Conteúdo Principal (main)*/
+main {
+    max-width: 960px; /* Define a largura máxima do conteúdo para telas maiores */
+    margin: 20px auto; /* Centraliza o main horizontalmente e adiciona margem vertical */
+    padding: 0 20px;   /* Adiciona preenchimento nas laterais para evitar que o conteúdo
+                          fique colado nas bordas da janela em telas menores. */
+}
+
+/*Estilos para as Seções de Conteúdo (section)*/
+section {
+    background-color: var(--cor-fundo-card); /* Usa variável CSS */
+    padding: 20px;          /* Preenchimento interno de 20px em todos os lados */
+    margin-bottom: 20px;    /* Margem inferior de 20px para separar as seções */
+    border-radius: 8px;     /* Cantos levemente arredondados */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para um efeito de "card" */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+/*Estilos para o estado :hover das Seções de Conteúdo */
+section:hover {
+    transform: translateY(-5px); /* Move a seção 5px para cima ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Aumenta a sombra para um efeito de "levantar" */
+}
+
+/*Estilos para Imagens dentro de qualquer seção
+
+ */
+section img {
+    max-width: 100%;    /* Garante que a imagem nunca seja maior que seu contêiner pai (a seção) */
+    height: auto;       /* Mantém a proporção original da imagem ao redimensionar */
+    display: block;     /* Transforma a imagem (inline-block por padrão) em um elemento de bloco
+                           para que 'margin: auto' possa centralizá-la. */
+    margin: 20px auto;  /* Centraliza a imagem horizontalmente e adiciona margem vertical */
+    border-radius: 8px; /* Cantos levemente arredondados para a imagem */
+}
+
+/*Estilos para a Linha Horizontal (hr)
+ */
+hr {
+    border: none;             /* Remove a borda padrão do navegador */
+    background-color: var(--cor-borda-clara); /* Usa variável CSS */
+    height: 1px;              /* Define a espessura da linha como 1 pixel */
+    width: 80%;               /* Define a largura da linha como 80% do seu contêiner */
+    margin: 20px auto;        /* Centraliza a linha horizontalmente e adiciona margem vertical */
+}
+
+/* Estilos para a Tabela de Conversão (table)*/
+table {
+    width: 100%;            /* A tabela ocupa 100% da largura de sua seção pai */
+    border-collapse: collapse; /* Colapsa as bordas das células, removendo o espaçamento padrão */
+    margin: 20px auto;      /* Centraliza a tabela e adiciona margem vertical */
+}
+
+ */
+table th, table td {
+    border: 1px solid var(--cor-borda-clara); /* Usa variável CSS */
+    padding: 8px;           /* Adiciona preenchimento interno de 8px em todas as células */
+    text-align: center;     /* Centraliza o texto dentro das células */
+}
+
+ 
+table th {
+    background-color: var(--cor-fundo-tabela-cabecalho); /* Usa variável CSS */
+    color: var(--cor-texto-escuro);               /* Usa variável CSS */
+}
+
+/*
+ * Estilos para o Formulário (form)
+ */
+form {
+    margin-bottom: 20px; /* Adiciona uma margem na parte inferior do formulário para espaçamento */
+    text-align: center;  /* Centraliza o conteúdo de texto dentro do formulário */
+}
+
+/*
+ * Estilos para os campos de entrada de email e o botão de envio dentro do formulário.
+ */
+form input[type="email"] {
+    width: 80%;             /* Largura do campo de email */
+    padding: 10px;          /* Preenchimento interno */
+    margin-bottom: 10px;    /* Margem inferior para separar do checkbox/botão */
+    border: 1px solid var(--cor-borda-clara); /* Usa variável CSS */
+    border-radius: 4px;     /* Cantos arredondados */
+    font-size: 16px;        /* Tamanho da fonte */
+    display: block;         /* Transforma em bloco para aceitar margin: auto e centralizar */
+    margin-left: auto;      /* Centraliza o input horizontalmente */
+    margin-right: auto;     /* Centraliza o input horizontalmente */
+}
+
+form input[type="checkbox"] {
+    margin-right: 5px; /* Espaçamento à direita do checkbox para separar do label */
+}
+
+form label[for="aceite-termos"] {
+    display: inline-block; /* Mantém o label na mesma linha do checkbox */
+    font-weight: normal; /* Remove negrito padrão se houver */
+    color: var(--cor-texto-escuro); /* Usa variável CSS */
+    margin-bottom: 10px; /* Margem inferior para separar do botão */
+}
+
+form button[type="submit"] {
+    background-color: var(--cor-primaria); /* Usa variável CSS */
+    color: var(--cor-texto-claro);            /* Usa variável CSS */
+    padding: 10px 20px;     /* Preenchimento interno */
+    border: none;           /* Remove a borda padrão */
+    border-radius: 4px;     /* Cantos arredondados */
+    cursor: pointer;        /* Muda o cursor para indicar que é clicável */
+    font-size: 16px;        /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+form button[type="submit"]:hover {
+    background-color: #555; /* Cor de fundo mais clara ao passar o mouse */
+}
+
+/* Estilos para o Rodapé (footer)*/
+footer {
+    background-color: var(--cor-primaria); /* Usa variável CSS */
+    color: var(--cor-texto-claro);            /* Usa variável CSS */
+    text-align: center;     /* Centraliza o texto dentro do rodapé */
+    padding: 1em 0;         /* Preenchimento de 1em em cima/baixo e 0 nas laterais */
+    font-size: 0.9em;       /* Tamanho da fonte um pouco menor para o rodapé */
+    margin-top: 20px;       /* Adiciona uma margem superior para separar do conteúdo acima */
+}
+
+/* Media Queries para Responsividade*/
+@media screen and (max-width: 600px) {
+    /* Ajustes para a Navegação em Telas Pequenas
+     */
+    nav ul li {
+        float: none; /* Remove o float para que os itens da lista se empilhem verticalmente */
+        width: 100%; /* Garante que cada item ocupe a largura total disponível */
+    }
+
+    /* Ajustes para os Links da Navegação em Telas Pequenas*/
+    nav ul li a {
+        text-align: left; /* Alinha o texto dos links à esquerda em telas pequenas */
+    }
+
+    /* Ajustes para o campo de email do formulário em telas pequenas
+    */
+    form input[type="email"] {
+        width: 95%; /* Aumenta a largura do campo de email em telas pequenas */
+    }
+
+       main {
+        padding: 0 10px; /* Reduz o padding lateral para 10px em telas pequenas */
+    }
+
+    /* Ajustes para o Título Principal (h1) em Telas Pequenas*/
+    header h1 {
+        font-size: 2em; /* Reduz o tamanho da fonte do h1 em telas pequenas */
+    }
+
+    /* Ajustes para as Seções (section) em Telas Pequenas*/
+    section {
+        padding: 15px; /* Reduz o padding interno das seções em telas pequenas */
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres do documento -->
+    <meta charset="UTF-8">
+    <!-- Configura a visualização para dispositivos móveis, garantindo responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece na aba do navegador -->
+    <title>Mini-Site de Receitas - Contato</title>
+    
+    <!-- Link para o arquivo de estilos CSS externo -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Link para o Tailwind CSS via CDN (importante para estilos utilitários e responsividade) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte Inter para todo o corpo do documento */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Cabeçalho da página: Mantém a mesma estrutura do index.html para consistência -->
+    <header class="bg-gradient-to-r from-red-500 to-orange-500 text-white p-6 shadow-md rounded-b-lg flex flex-col md:flex-row justify-between items-center">
+        <h1 class="text-3xl font-bold mb-4 md:mb-0">Delícias Culinárias: Seu Guia de Receitas</h1>
+        <nav>
+            <ul class="flex flex-wrap justify-center gap-6">
+                <li><a href="../index.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Início</a></li>
+                <li><a href="doces.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Receitas de Doces</a></li>
+                <li><a href="salgados.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Receitas de Salgados</a></li>
+                <li><a href="dicas.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Dicas</a></li>
+                <li><a href="produtos.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Nossos Produtos</a></li>
+                <li><a href="contato.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página de contato -->
+    <main class="max-w-xl mx-auto my-8 p-6 bg-white rounded-lg shadow-md">
+        <!-- A tag <section> é apropriada para agrupar o formulário de contato -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Fale Conosco!</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6 text-center">Tem alguma dúvida, sugestão ou quer compartilhar uma receita? Envie-nos uma mensagem!</p>
+            
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="nome" class="block text-lg font-medium text-gray-700 mb-1">Nome:</label>
+                    <input type="text" id="nome" name="nome" required 
+                           class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-lg">
+                </div>
+                <div>
+                    <label for="email" class="block text-lg font-medium text-gray-700 mb-1">E-mail:</label>
+                    <input type="email" id="email" name="email" required 
+                           class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-lg">
+                </div>
+                <div>
+                    <label for="assunto" class="block text-lg font-medium text-gray-700 mb-1">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto" 
+                           class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-lg">
+                </div>
+                <div>
+                    <label for="mensagem" class="block text-lg font-medium text-gray-700 mb-1">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required 
+                              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-lg"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" 
+                            class="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-150 ease-in-out">
+                        Enviar Mensagem
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé da página: Mantém a mesma estrutura do index.html para consistência -->
+    <footer class="bg-gray-900 text-white p-6 text-center rounded-t-lg mt-8">
+        <p>&copy; 2025 Mini-Site de Receitas. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

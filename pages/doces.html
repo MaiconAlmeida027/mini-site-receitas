@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Site de Receitas - Receitas de Doces</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Este bloco de estilo agora está vazio, pois as classes Tailwind serão aplicadas diretamente no HTML */
+        /* Se você precisar de CSS personalizado que não seja Tailwind, coloque-o aqui ou em style.css */
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-gradient-to-r from-red-500 to-orange-500 text-white p-6 shadow-md rounded-b-lg flex flex-col md:flex-row justify-between items-center">
+        <h1 class="text-3xl font-bold mb-4 md:mb-0">Delícias Culinárias: Seu Guia de Receitas</h1>
+        <nav>
+            <ul class="flex flex-wrap justify-center gap-6">
+                <li><a href="../index.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Início</a></li>
+                <li><a href="doces.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Receitas de Doces</a></li>
+                <li><a href="salgados.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Receitas de Salgados</a></li>
+                <li><a href="dicas.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Dicas</a></li>
+                <li><a href="produtos.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Nossos Produtos</a></li>
+                <li><a href="contato.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto my-8 p-4">
+        <section class="bg-white p-8 rounded-xl shadow-md mb-8">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6 text-center">Receitas de Doces</h2>
+            <p class="text-xl text-gray-700 leading-relaxed mb-8 text-center">Adoce o seu dia com nossas receitas de doces irresistíveis!</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card da Receita: Brigadeiro Tradicional -->
+                <!-- AQUI as classes Tailwind foram aplicadas diretamente -->
+                <div class="bg-white p-6 rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x250/FFC0CB/000000?text=Brigadeiro" alt="Brigadeiros tradicionais em forminhas" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Brigadeiro Tradicional</h3>
+                    <p class="text-gray-600 mb-4">O clássico doce brasileiro, perfeito para todas as ocasiões e fácil de fazer.</p>
+                    <a href="brigadeiro.html" class="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">Ver Receita</a>
+                </div>
+
+                <!-- Card da Receita: Bolo de Cenoura com Cobertura de Chocolate -->
+                <!-- AQUI as classes Tailwind foram aplicadas diretamente -->
+                <div class="bg-white p-6 rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x250/FFA07A/000000?text=Bolo+Cenoura" alt="Fatia de bolo de cenoura com cobertura de chocolate" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3>Bolo de Cenoura com Cobertura de Chocolate</h3>
+                    <p class="text-gray-600 mb-4">Um bolo fofinho e úmido, com uma irresistível cobertura de chocolate. Perfeito para o café da tarde!</p>
+                    <a href="bolodecenoura.html" class="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">Ver Receita</a>
+                </div>
+
+                <!-- Exemplo de placeholder para futura receita -->
+                <!-- AQUI as classes Tailwind foram aplicadas diretamente -->
+                <div class="bg-white p-6 rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x250/DDA0DD/000000?text=Doce+Novo" alt="Imagem de um novo doce" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3>Pudim de Leite Condensado</h3>
+                    <p class="text-gray-600 mb-4">Um pudim cremoso e delicioso, com calda de caramelo. Um clássico da culinária brasileira.</p>
+                    <a href="#" class="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">Em Breve!</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white p-6 text-center rounded-t-lg mt-8">
+        <p>&copy; 2025 Mini-Site de Receitas. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+```
