@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres do documento -->
+    <meta charset="UTF-8">
+    <!-- Configura a visualização para dispositivos móveis, garantindo responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece na aba do navegador para esta receita específica -->
+    <title>Mini-Site de Receitas - Bolo de Cenoura</title>
+    
+    <!-- Link para o arquivo de estilos CSS externo, o mesmo usado no index.html -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Link para o Tailwind CSS via CDN (importante para estilos utilitários e responsividade) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- IMPORTAÇÃO DA FONTE INTER DO GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Define a fonte Inter para todo o corpo do documento, agora que ela está importada */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Cabeçalho da página: Mantém a mesma estrutura do index.html para consistência -->
+    <!-- Adicionei classes Tailwind para consistência visual com o index.html -->
+    <header class="bg-gradient-to-r from-red-500 to-orange-500 text-white p-6 shadow-md rounded-b-lg flex flex-col md:flex-row justify-between items-center">
+        <h1 class="text-3xl font-bold mb-4 md:mb-0">Delícias Culinárias: Seu Guia de Receitas</h1>
+        <nav>
+            <ul class="flex flex-wrap justify-center gap-6">
+                <li><a href="../index.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Início</a></li>
+                <!-- Links atualizados para as novas categorias e páginas -->
+                <li><a href="doces.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Receitas de Doces</a></li>
+                <li><a href="salgados.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Receitas de Salgados</a></li>
+                <li><a href="dicas.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Dicas</a></li>
+                <li><a href="produtos.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Nossos Produtos</a></li>
+                <li><a href="contato.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página da receita -->
+    <!-- Usei classes Tailwind para centralizar e estilizar o conteúdo principal -->
+    <main class="max-w-4xl mx-auto my-8 p-4 bg-white rounded-lg shadow-md">
+        <!-- A tag <article> é ideal para um conteúdo independente e completo, como uma receita -->
+        <article>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Bolo de Cenoura com Cobertura de Chocolate</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">Um bolo fofinho e úmido, com uma irresistível cobertura de chocolate. Perfeito para o café da tarde!</p>
+            
+            <!-- Imagem da receita (placeholder) -->
+            <img src="https://placehold.co/600x300/FFA07A/000000?text=Bolo+de+Cenoura" alt="Fatia de bolo de cenoura com cobertura de chocolate" class="w-full h-auto rounded-md mb-6">
+            
+            <!-- Seção semântica para Ingredientes do Bolo -->
+            <section class="mb-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Ingredientes (Bolo):</h3>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                    <li>3 cenouras médias picadas</li>
+                    <li>4 ovos grandes</li>
+                    <li>1 xícara de óleo vegetal</li>
+                    <li>2 xícara de açúcar</li>
+                    <li>2 xícaras de farinha de trigo</li>
+                    <li>1 colher de sopa de fermento em pó</li>
+                </ul>
+            </section>
+
+            <!-- Seção semântica para Ingredientes da Cobertura -->
+            <section class="mb-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Ingredientes (Cobertura):</h3>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                    <li>1 xícara de açúcar</li>
+                    <li>1/2 xícara de chocolate em pó</li>
+                    <li>1 colher de sopa de manteiga</li>
+                    <li>1/2 xícara de leite</li>
+                </ul>
+            </section>
+
+            <!-- Seção semântica para Modo de Preparo do Bolo -->
+            <section class="mb-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Modo de Preparo (Bolo):</h3>
+                <ol class="list-decimal list-inside text-gray-700 leading-relaxed">
+                    <li>Preaqueça o forno a 180°C e unte uma forma.</li>
+                    <li>No liquidificador, bata as cenouras, os ovos e o óleo até obter uma mistura homogênea.</li>
+                    <li>Adicione o açúcar e bata mais um pouco.</li>
+                    <li>Transfira a mistura para uma tigela e adicione a farinha de trigo peneirada, misturando delicadamente.</li>
+                    <li>Por último, adicione o fermento e incorpore à massa.</li>
+                    <li>Despeje a massa na forma e asse por aproximadamente 35-40 minutos, ou até que um palito saia limpo.</li>
+                </ol>
+            </section>
+
+            <!-- Seção semântica para Modo de Preparo da Cobertura -->
+            <section>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Modo de Preparo (Cobertura):</h3>
+                <ol class="list-decimal list-inside text-gray-700 leading-relaxed">
+                    <li>Em uma panela, misture todos os ingredientes da cobertura.</li>
+                    <li>Leve ao fogo baixo, mexendo sempre até engrossar.</li>
+                    <li>Despeje a cobertura ainda quente sobre o bolo já assado e frio.</li>
+                </ol>
+            </section>
+        </article>
+    </main>
+
+    <!-- Rodapé da página: Mantém a mesma estrutura do index.html para consistência -->
+    <footer class="bg-gray-900 text-white p-6 text-center rounded-t-lg mt-8">
+        <p>&copy; 2025 Mini-Site de Receitas. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

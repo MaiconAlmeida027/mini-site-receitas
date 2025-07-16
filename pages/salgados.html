@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Site de Receitas - Receitas de Salgados</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-gradient-to-r from-red-500 to-orange-500 text-white p-6 shadow-md rounded-b-lg flex flex-col md:flex-row justify-between items-center">
+        <h1 class="text-3xl font-bold mb-4 md:mb-0">Delícias Culinárias: Seu Guia de Receitas</h1>
+        <nav>
+            <ul class="flex flex-wrap justify-center gap-6">
+                <li><a href="../index.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Início</a></li>
+                <li><a href="doces.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Receitas de Doces</a></li>
+                <li><a href="salgados.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Receitas de Salgados</a></li>
+                <li><a href="dicas.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Dicas</a></li>
+                <li><a href="produtos.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Nossos Produtos</a></li>
+                <li><a href="contato.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto my-8 p-4">
+        <section class="bg-white p-8 rounded-xl shadow-md mb-8">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6 text-center">Receitas de Salgados</h2>
+            <p class="text-xl text-gray-700 leading-relaxed mb-8 text-center">Descubra uma variedade de receitas salgadas, perfeitas para refeições, lanches ou petiscos!</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card da Receita: Pão de Queijo Caseiro -->
+                <div class="bg-white p-6 rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x250/F0E68C/000000?text=Pao+de+Queijo" alt="Pães de queijo recém-assados" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Pão de Queijo Caseiro</h3>
+                    <p class="text-gray-600 mb-4">O pão de queijo mineiro autêntico, fácil de fazer e delicioso. Ideal para o café da manhã ou lanche.</p>
+                    <a href="pao-de-queijo.html" class="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">Ver Receita</a>
+                </div>
+
+                <!-- Card da Receita: Coxinha de Frango Cremosa -->
+                <div class="bg-white p-6 rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x250/DAA520/000000?text=Coxinha" alt="Coxinhas de frango douradas" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Coxinha de Frango Cremosa</h3>
+                    <p class="text-gray-600 mb-4">A coxinha perfeita, com massa macia e recheio cremoso. Um salgado clássico e muito saboroso.</p>
+                    <a href="coxinha.html" class="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">Ver Receita</a>
+                </div>
+
+                <!-- Exemplo de placeholder para futura receita salgada -->
+                <div class="bg-white p-6 rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/400x250/B0E0E6/000000?text=Salgado+Novo" alt="Imagem de um novo salgado" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Empadão de Frango</h3>
+                    <p class="text-gray-600 mb-4">Um empadão cremoso e saboroso, ideal para o almoço em família ou um jantar especial.</p>
+                    <a href="#" class="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">Em Breve!</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white p-6 text-center rounded-t-lg mt-8">
+        <p>&copy; 2025 Mini-Site de Receitas. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

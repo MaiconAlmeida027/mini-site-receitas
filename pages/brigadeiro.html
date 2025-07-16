@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres do documento -->
+    <meta charset="UTF-8">
+    <!-- Configura a visualização para dispositivos móveis, garantindo responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece na aba do navegador para esta receita específica -->
+    <title>Mini-Site de Receitas - Brigadeiro Tradicional</title>
+    
+    <!-- Link para o arquivo de estilos CSS externo -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Link para o Tailwind CSS via CDN (importante para estilos utilitários e responsividade) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte Inter para todo o corpo do documento */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Cabeçalho da página: Mantém a mesma estrutura do index.html para consistência -->
+    <header class="bg-gradient-to-r from-red-500 to-orange-500 text-white p-6 shadow-md rounded-b-lg flex flex-col md:flex-row justify-between items-center">
+        <h1 class="text-3xl font-bold mb-4 md:mb-0">Delícias Culinárias: Seu Guia de Receitas</h1>
+        <nav>
+            <ul class="flex flex-wrap justify-center gap-6">
+                <li><a href="../index.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Início</a></li>
+                <li><a href="doces.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Receitas de Doces</a></li>
+                <li><a href="salgados.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Receitas de Salgados</a></li>
+                <li><a href="dicas.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Dicas</a></li>
+                <li><a href="produtos.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Nossos Produtos</a></li>
+                <li><a href="contato.html" class="text-white hover:text-yellow-200 text-lg font-semibold">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página da receita -->
+    <main class="max-w-4xl mx-auto my-8 p-4 bg-white rounded-lg shadow-md">
+        <!-- A tag <article> é ideal para um conteúdo independente e completo, como uma receita -->
+        <article>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Brigadeiro Tradicional</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-4">O doce brasileiro mais amado! Simples de fazer e irresistível.</p>
+            
+            <!-- Imagem da receita (placeholder) -->
+            <img src="https://placehold.co/600x300/8B4513/FFFFFF?text=Brigadeiro" alt="Brigadeiros em forminhas" class="w-full h-auto rounded-md mb-6">
+            
+            <!-- Seção semântica para Ingredientes -->
+            <section class="mb-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Ingredientes:</h3>
+                <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                    <li>1 lata de leite condensado</li>
+                    <li>4 colheres de sopa de chocolate em pó (50% cacau é o ideal)</li>
+                    <li>1 colher de sopa de manteiga sem sal</li>
+                    <li>Granulado de chocolate para decorar</li>
+                </ul>
+            </section>
+
+            <!-- Seção semântica para Modo de Preparo -->
+            <section>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Modo de Preparo:</h3>
+                <ol class="list-decimal list-inside text-gray-700 leading-relaxed">
+                    <li>Em uma panela, misture o leite condensado, o chocolate em pó e a manteiga.</li>
+                    <li>Leve ao fogo baixo, mexendo sempre para não grudar no fundo.</li>
+                    <li>Continue mexendo até a mistura desgrudar do fundo da panela (ponto de brigadeiro de enrolar).</li>
+                    <li>Desligue o fogo e transfira a massa para um prato untado com manteiga. Deixe esfriar completamente.</li>
+                    <li>Com as mãos untadas, enrole pequenas bolinhas e passe-as no granulado.</li>
+                    <li>Coloque em forminhas de papel e sirva.</li>
+                </ol>
+            </section>
+        </article>
+    </main>
+
+    <!-- Rodapé da página: Mantém a mesma estrutura do index.html para consistência -->
+    <footer class="bg-gray-900 text-white p-6 text-center rounded-t-lg mt-8">
+        <p>&copy; 2025 Mini-Site de Receitas. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
